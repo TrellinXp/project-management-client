@@ -1,6 +1,8 @@
+// auth/Signup.js
+
 import React, { Component } from 'react';
+import authService from "./auth-service";
 import { Link } from 'react-router-dom';
-import authService from '../../services/auth/auth-service';
 
 class Signup extends Component {
 
@@ -16,7 +18,7 @@ class Signup extends Component {
                     username: "",
                     password: "",
                 });
-                this.props.getUser(createdUser, true);
+                // this.props.getUser(response, true);
             })
             .catch(error => console.log(error))
     }
@@ -29,33 +31,28 @@ class Signup extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.handleFormSubmit} className="signup">
-                    <div>
-                        <label class="signup-label">
-                            Username:
-                        </label>
+                <form onSubmit={this.handleFormSubmit}>
+                    <label>
+                        Username:
                         <input
                             type="text"
                             name="username"
-                            className="input"
                             value={this.state.username}
                             onChange={this.handleChange}
                         />
-                    </div>
-                    <div>
-                        <label class="signup-label">
-                            Password:
-                        </label>
+                    </label>
+
+                    <label>
+                        Password:
                         <input
                             type="password"
                             name="password"
-                            className="input"
                             value={this.state.password}
                             onChange={this.handleChange}
                         />
-                    </div>
+                    </label>
 
-                    <button type="submit" class="signup-btn"> Signup </button>
+                    <button type="submit"> Signup </button>
                 </form>
 
                 <p>
@@ -66,7 +63,6 @@ class Signup extends Component {
             </div>
         )
     }
-    
 }
 
 export default Signup;

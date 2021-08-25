@@ -71,6 +71,30 @@ li {
   list-style: none;
 }
 
+.signup {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-btn {
+  width: 10rem;
+  margin: auto;
+  margin-top: 2vh;
+}
+
+.signup-label {
+  width: 10vw !important;
+  margin-right: 2vw;
+}
+
+.input {
+  width: 10vw;
+}
+
+.nav-style {
+ 
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

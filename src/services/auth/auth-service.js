@@ -1,5 +1,3 @@
-// auth/auth-service.js
- 
 import axios from 'axios';
  
 class AuthService {
@@ -9,9 +7,23 @@ class AuthService {
       withCredentials: true
     });
   }
+
   signup = (username, password) => {
+    console.log("Service Signup");
     return this.service.post('/signup', { username, password }).then(response => response.data);
   }
+
+  loggedin = () => {
+    return this.service.get('/loggedin').then(response => response.data);
+  };
+
+  login = (username, password) => {
+    return this.service.post('/login', { username, password }).then(response => response.data);
+  };
+
+  logout = () => {
+    return this.service.post('/logout', {}).then(response => response.data);
+  };
 }
  
 // class AuthService is used to organize and group the methods.
