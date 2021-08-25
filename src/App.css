@@ -28,6 +28,49 @@
   color: #61dafb;
 }
 
+.project {
+  color: black;
+  border: 1px solid black;
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 20vw;
+  font-size: 24px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-form {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  margin: auto;
+}
+
+.nav-style {
+  background-color: #61dafb;
+  height: 6rem;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+li {
+  color: red;
+  margin: 0 0.8rem;
+  font-size: 1.3rem;
+  position: relative;
+  list-style: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
